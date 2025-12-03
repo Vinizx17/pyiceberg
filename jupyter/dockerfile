@@ -1,0 +1,22 @@
+FROM jupyter/base-notebook:latest
+
+USER root
+
+# Dependências necessárias para PyIceberg + Hive Metastore
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    libsasl2-dev \
+    libkrb5-dev \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+USER $NB_UID
+
+# Copia requirements
+COPY requirements.txt /tmp/requirements.txt
+
+# Instala pacotes Python no ambiente do Jupyter
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+WORKDIR /home/jovyan/work
+
