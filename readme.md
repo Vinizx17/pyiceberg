@@ -13,6 +13,11 @@ Este projeto implementa um pipeline de **ETL** (Extract, Transform, Load) utiliz
 | **Formato de Tabela** | **Apache Iceberg** | Formato de tabela aberta que garante consistência e evolução de *schema*. |
 | **Conectividade** | **PyIceberg**, **Boto3** | Interface entre Python, o catálogo Hive e o armazenamento S3 (MinIO). |
 
+### Pré-requisitos
+
+Visual studio
+Docker desktop
+
 ## Como Iniciar
 
 Este projeto é projetado para ser executado em um ambiente com Docker Compose. Seguir o comando abaixo no powershell para subida do ambiente
@@ -20,8 +25,5 @@ Este projeto é projetado para ser executado em um ambiente com Docker Compose. 
 ```bash
 docker-compose up --build -d
 
-### Pré-requisitos
 
-Visual studio
-Docker desktop
 
