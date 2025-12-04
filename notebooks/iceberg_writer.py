@@ -1,10 +1,9 @@
-# iceberg_writer.py
+import uuid
+from typing import Dict
 
 import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
-import uuid
-from typing import Dict
 from pyiceberg.io import load_file_io
 from pyiceberg.catalog import load_catalog
 

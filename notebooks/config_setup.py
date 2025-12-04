@@ -15,7 +15,7 @@ def configure_iceberg() -> Dict[str, str]:
     s3_endpoint = os.getenv("PYICEBERG_CATALOG__HIVE__S3_ENDPOINT")
     s3_access_key = os.getenv("AWS_ACCESS_KEY_ID")
     s3_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
-    bucket = "pyiceberg"  # Ou torne isso uma variável de ambiente se o nome do bucket mudar
+    bucket = "raw"  # Ou torne isso uma variável de ambiente se o nome do bucket mudar
     hive_metastore_uri = "thrift://hive-metastore:9083"
 
     # AJUSTES CRÍTICOS para MinIO (PyArrow)

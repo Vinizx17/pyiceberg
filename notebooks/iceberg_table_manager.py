@@ -1,8 +1,6 @@
-# iceberg_table_manager.py
-
+from typing import Tuple, List
 from pyiceberg.catalog import load_catalog
 from pyiceberg.schema import Schema
-from typing import Tuple, List
 
 # As classes de tipos devem ser importadas no script principal ou em um módulo de tipos dedicado
 # from pyiceberg.types import StringType, LongType, DoubleType, TimestampType, NestedField

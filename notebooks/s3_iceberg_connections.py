@@ -1,8 +1,7 @@
-# s3_iceberg_connections.py
+from typing import Dict, Tuple
 
 import boto3
 from pyiceberg.catalog import load_catalog
-from typing import Dict, Tuple
 
 def setup_connections(config: Dict[str, str]) -> Tuple[boto3.client, load_catalog]:
     """
